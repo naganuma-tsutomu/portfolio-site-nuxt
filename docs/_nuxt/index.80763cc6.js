@@ -1,0 +1,1 @@
+import{_ as o,c as t,o as c,a as e}from"./entry.1a5c13e0.js";const n={},s=e("a",{href:"/about"},[e("p",null,"こん")],-1),a=[s];function r(_,d){return c(),t("div",null,a)}const f=o(n,[["render",r]]);export{f as default};
