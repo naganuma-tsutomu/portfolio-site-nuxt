@@ -6,6 +6,7 @@ services:
     build: .
     volumes:
       - ./src:/src:cached
+      - ./docs:/src/docs
       - node_modules:/src/node_modules
       # ↑ 次回起動後にコメントアウトを解除
     working_dir: "/src"
