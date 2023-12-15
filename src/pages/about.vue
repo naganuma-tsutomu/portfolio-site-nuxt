@@ -1,5 +1,7 @@
 <template>
   <div>
-    <slot /> // pages配下のファイルを表示する
+    <a href="/about">
+        <p>こん</p>
+    </a>
   </div>
 </template>

@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <NuxtLink to="/about">about</NuxtLink>
-    <p>s</p>
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
