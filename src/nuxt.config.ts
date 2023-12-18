@@ -13,6 +13,7 @@ export default defineNuxtConfig({
       WPAPI: process.env.WPAPI,
     },
   },
+  ssr: true, // SSRする場合
   nitro: {
     prerender: {
       failOnError: false,
