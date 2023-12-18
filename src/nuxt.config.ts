@@ -13,5 +13,10 @@ export default defineNuxtConfig({
       WPAPI: process.env.WPAPI,
     },
   },
+  nitro: {
+    prerender: {
+      failOnError: false,
+    },
+  },
   // modules: [ '@nuxt/image'], // 追記,RC版を導入した場合は'@nuxt/image'
 });
