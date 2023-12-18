@@ -1,7 +1,9 @@
 <script setup>
 const config = useRuntimeConfig();
-const { data: posts, error } = await useFetch(
-  `${config.public.WPAPI}/wp-json/wp/v2/tourist-spot/?acf_format=standard`
+const { data: posts, error } = await useAsyncData(() =>
+  $fetch(
+    `${config.public.WPAPI}/wp-json/wp/v2/tourist-spot/?acf_format=standard`
+  )
 );
 console.log(error);
 </script>
