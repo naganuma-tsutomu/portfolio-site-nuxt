@@ -1,8 +1,10 @@
 <script setup>
 const config = useRuntimeConfig();
+console.log(config);
 const { data: posts } = await useFetch(
   `${config.public.WPAPI}/wp-json/wp/v2/tourist-spot/?acf_format=standard`
 );
+console.log(posts);
 </script>
 <template>
   <div class="ml-5 mr-5">
