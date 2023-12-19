@@ -1,8 +1,8 @@
 <template>
   <header>
+    <div class="flex items-center justify-between">
+      <NuxtLink to="/"><h1 class="font-mono text-3xl py-4 ml-8 transition-all hover:scale-110">NAGANUMA</h1></NuxtLink>
 
-    <div class="flex items-center justify-center">
-        <span>Naganuma</span>
       <button @click="toggleNav" class="outline-none focus:outline-none">
         <svg
           class="w-6 h-6"
