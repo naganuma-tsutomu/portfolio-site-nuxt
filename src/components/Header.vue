@@ -44,8 +44,8 @@
           >
         </li>
         <li>
-          <NuxtLink to="/products" class="block h-full bg-slate-500"
-            >プロダクト</NuxtLink
+          <NuxtLink to="/posts" class="block h-full bg-slate-500"
+            >投稿</NuxtLink
           >
         </li>
       </ul>

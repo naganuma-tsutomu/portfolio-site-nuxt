@@ -16,18 +16,27 @@
     </div>
     <div class="mx-auto flex justify-center mt-5">
       <div class="w-auto rounded-md bg-fuchsia-100 transition-all hover:-translate-y-1 overflow-hidden mx-3" v-if="currentPage !== '1'">
-        <NuxtLink class="px-3 py-2 block" :to="updateRoute(parseInt(currentPage) - 1)"
-          >Previous</NuxtLink
-        >
+        <NuxtLink class="px-3 py-2 block" :to="updateRoute(parseInt(currentPage) - 1)">Previous</NuxtLink>
       </div>
       <div class="w-auto rounded-md bg-fuchsia-100 transition-all hover:-translate-y-1 overflow-hidden mx-3" v-if="currentPage != totalPages">
         <NuxtLink class="px-3 py-2 block" :to="updateRoute(parseInt(currentPage) + 1)"> Next </NuxtLink>
       </div>
+      <p>{{ name }}</p>
     </div>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+interface Props {
+  name: number
+  to?: string
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  name: 0,
+  to: '/'
+})
+
 const config = useRuntimeConfig();
 const route = useRoute();
 watch(
@@ -38,7 +47,7 @@ watch(
 );
 const currentPage = ref(route.query.page || "1"); // 現在のページ番号
 const totalPosts = ref(0);
-const perPage = 9; // 1ページに表示する記事の数
+const perPage = 6; // 1ページに表示する記事の数
 const totalPages = computed(() => {
   return Math.ceil(totalPosts.value / perPage);
 });
@@ -55,6 +64,8 @@ const {
       {
         query: {
           page: currentPage.value,
+          area_cat: props.name,
+          order: "asc",
         },
         async onResponse({ request, response, options }) {
           totalPosts.value = response.headers.get('X-WP-Total');
@@ -62,7 +73,7 @@ const {
       }
     ),
   {
-    watch: [currentPage],
+    watch: [currentPage,props],
   }
 );
 const updateRoute = (page) => {
