@@ -28,7 +28,7 @@
 
 <script setup lang="ts">
 interface Props {
-  name: number
+  name: Array<number>
   to?: string
 }
 
