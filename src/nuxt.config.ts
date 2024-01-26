@@ -2,6 +2,10 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/css/tailwind.css"],
+  // ページアニメーションの設定
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+  },
   postcss: {
     plugins: {
       tailwindcss: {},

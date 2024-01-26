@@ -76,7 +76,7 @@ const {
     watch: [currentPage,props],
   }
 );
-const updateRoute = (page) => {
+const updateRoute = (page:object) => {
   return {
     path: route.path,
     query: { page: page },

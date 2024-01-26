@@ -1,7 +1,13 @@
 <template>
   <header>
     <div class="flex items-center justify-between">
-      <NuxtLink to="/"><h1 class="font-mono text-3xl py-4 ml-8 transition-all hover:scale-110">NAGANUMA</h1></NuxtLink>
+      <NuxtLink to="/"
+        ><h1
+          class="font-mono text-3xl py-4 mx-8 transition-all hover:scale-110"
+        >
+          N
+        </h1></NuxtLink
+      >
 
       <button @click="toggleNav" class="outline-none focus:outline-none">
         <svg
@@ -34,19 +40,15 @@
       @click="toggleNav"
       class="md:flex md:items-center md:space-x-4"
     >
-      <ul class="grid grid-cols-3 text-center h-10">
+      <ul class="grid grid-cols-3 text-center h-10 [&>li]:bg-lime-300">
         <li>
-          <NuxtLink to="/" class="block h-full bg-slate-500">ホーム</NuxtLink>
+          <NuxtLink to="/" class="block h-full">ホーム</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/tourist-spot" class="block h-full bg-slate-500"
-            >観光地</NuxtLink
-          >
+          <NuxtLink to="/tourist-spot" class="block h-full">観光地</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/posts" class="block h-full bg-slate-500"
-            >投稿</NuxtLink
-          >
+          <NuxtLink to="/posts" class="block h-full">投稿</NuxtLink>
         </li>
       </ul>
     </nav>
