@@ -35,23 +35,21 @@
         </svg>
       </button>
     </div>
-    <nav
-      v-if="showNav"
-      @click="toggleNav"
-      class="md:flex md:items-center md:space-x-4"
-    >
-      <ul class="grid grid-cols-3 text-center h-10 [&>li]:bg-lime-300">
-        <li>
-          <NuxtLink to="/" class="block h-full">ホーム</NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/tourist-spot" class="block h-full">観光地</NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/posts" class="block h-full">投稿</NuxtLink>
-        </li>
-      </ul>
-    </nav>
+    <div class="fixed w-full h-full bg-white" v-if="showNav" @click="toggleNav">
+      <nav class="md:flex md:items-center md:space-x-4">
+        <ul class="grid grid-cols-3 text-center h-10 [&>li]:bg-lime-300">
+          <li>
+            <NuxtLink to="/" class="block h-full">ホーム</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/tourist-spot" class="block h-full">観光地</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/posts" class="block h-full">投稿</NuxtLink>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 </template>
 

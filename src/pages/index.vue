@@ -16,5 +16,6 @@
         <NuxtLink to="/contact" class="block">CONTACT</NuxtLink>
       </li>
     </ul>
+  <Video />
   </div>
 </template>
