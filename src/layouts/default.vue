@@ -1,5 +1,5 @@
 <template>
-  <div class="text-white">
+  <div class="font-mono text-white w-[20rem] mx-auto">
     <div>
       <Head>
         <Title>タイトルです。</Title>
@@ -7,7 +7,10 @@
       </Head>
     </div>
     <Header />
-    <slot />
+    <Video />
+    <main class="min-h-[calc(100vh_-_10rem)]">
+      <slot />
+    </main>
     <Footer />
   </div>
 </template>

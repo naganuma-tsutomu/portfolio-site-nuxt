@@ -1,24 +1,22 @@
 <template>
-  <header>
-    <div class="flex items-center justify-between">
+  <header class="">
+    <div class="h-[5rem] flex items-center justify-between">
       <NuxtLink to="/"
-        ><h1
-          class="font-mono text-3xl py-4 mx-8 transition-all hover:scale-110"
-        >
-          Naganuma
+        ><h1 class="text-3xl p-4 transition-all hover:scale-110">
+          NAGANUMA
         </h1></NuxtLink
       >
 
       <button @click="toggleNav" class="outline-none focus:outline-none">
         <svg
-          class="w-6 h-6"
+          class="w-16 h-16 p-4"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
         >
           <path
             :class="{ 'opacity-0': showNav }"
-            style="transition: opacity 0.3s ease"
+            style="transition: opacity 0.6s ease"
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
@@ -26,7 +24,7 @@
           ></path>
           <path
             :class="{ 'opacity-0': !showNav }"
-            style="transition: opacity 0.3s ease"
+            style="transition: opacity 0.6s ease"
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
@@ -35,17 +33,23 @@
         </svg>
       </button>
     </div>
-    <div class="fixed w-full h-full bg-white" v-if="showNav" @click="toggleNav">
-      <nav class="md:flex md:items-center md:space-x-4">
-        <ul class="grid grid-cols-3 text-center h-10 [&>li]:bg-lime-300">
-          <li>
-            <NuxtLink to="/" class="block h-full">ホーム</NuxtLink>
+    <div
+      class="fixed top-5rem left-0 w-full h-full"
+      v-if="showNav"
+      @click="toggleNav"
+    >
+      <nav class="w-[20rem] mx-auto pb-[5rem] min-h-[calc(100vh_-_5rem)] grid items-center">
+        <ul
+          class="grid text-4xl text-lime-500  gap-20 [&>*]:font-bold [&_a]:p-5 [&>*]:border-solid [&>*]:border [&>*]:w-full [&>*]:text-center [&>*]:bg-white"
+        >
+          <li class="hover:bg-lime-500 hover:border-lime-500 transition-all">
+            <NuxtLink to="/about" class="block">ABOUT</NuxtLink>
           </li>
-          <li>
-            <NuxtLink to="/tourist-spot" class="block h-full">観光地</NuxtLink>
+          <li class="hover:bg-lime-500 hover:border-lime-500 transition-all">
+            <NuxtLink to="/tourist-spot" class="block">WORK</NuxtLink>
           </li>
-          <li>
-            <NuxtLink to="/posts" class="block h-full">投稿</NuxtLink>
+          <li class="hover:bg-lime-500 hover:border-lime-500 transition-all">
+            <NuxtLink to="/contact" class="block">CONTACT</NuxtLink>
           </li>
         </ul>
       </nav>
