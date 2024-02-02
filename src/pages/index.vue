@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul
-      class="grid place-items-center gap-2 [&>*]:font-bold [&_a]:p-5 [&>*]:bg-lime-300 [&>*]:w-[10rem] [&>*]:text-center"
+      class="grid place-items-center text-2xl text-white gap-5 [&>*]:font-bold [&_a]:p-5 [&>*]:border-solid [&>*]:border [&>*]:w-[10rem] [&>*]:text-center"
     >
       <li class="hover:bg-lime-500 transition-all rounded-lg">
         <NuxtLink to="/" class="block">TOP</NuxtLink>
@@ -10,7 +10,7 @@
         <NuxtLink to="/about" class="block">ABOUT</NuxtLink>
       </li>
       <li class="hover:bg-lime-500 transition-all">
-        <NuxtLink to="/works" class="block">WORKS</NuxtLink>
+        <NuxtLink to="/work" class="block">WORK</NuxtLink>
       </li>
       <li class="hover:bg-lime-500 transition-all">
         <NuxtLink to="/contact" class="block">CONTACT</NuxtLink>
