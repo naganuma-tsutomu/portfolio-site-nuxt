@@ -1,5 +1,6 @@
 <template>
   <NuxtLayout>
+    <Video />
     <NuxtPage />
   </NuxtLayout>
 </template>
