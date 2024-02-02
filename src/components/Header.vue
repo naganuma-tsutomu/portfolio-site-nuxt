@@ -5,7 +5,7 @@
         ><h1
           class="font-mono text-3xl py-4 mx-8 transition-all hover:scale-110"
         >
-          N
+          Naganuma
         </h1></NuxtLink
       >
 
