@@ -7,7 +7,7 @@
         <NuxtLink to="/about" class="block">ABOUT</NuxtLink>
       </li>
       <li class="hover:bg-lime-500 hover:border-lime-500 transition-all">
-        <NuxtLink to="/tourist-spot" class="block">WORK</NuxtLink>
+        <NuxtLink to="/work" class="block">WORK</NuxtLink>
       </li>
       <li class="hover:bg-lime-500 hover:border-lime-500 transition-all">
         <NuxtLink to="/contact" class="block">CONTACT</NuxtLink>
