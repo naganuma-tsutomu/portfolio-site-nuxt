@@ -1,6 +1,6 @@
 <template>
   <div class="mt-16">
-    <h1 class="text-4xl mb-4 font-bold indent-3">ABOUT</h1>
+    <h1 class="text-4xl mb-4 font-bold">ABOUT</h1>
     <div>
       <div class="">
         <img
@@ -17,8 +17,8 @@
         <p>趣味は料理です。</p>
       </div>
       <div class="mt-10">
-        <h2 class="text-3xl text-bold indent-3">SKILL</h2>
-        <div class="grid grid-cols-2 gap-3 mt-4">
+        <h2 class="text-3xl text-bold">SKILL</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4">
           <div class="">
             <p class="text-xl mb-2">Language</p>
             <div class="[&_span]:block [&_span]:indent-5">
@@ -53,7 +53,7 @@
           <div>
             <p class="text-xl mb-2">Other</p>
             <div class="[&_span]:block [&_span]:indent-5">
-              <span>Visual Studio Code</span>
+              <span>VisualStudioCode</span>
               <span>Node.js</span>
               <span>Git</span>
               <span>GitHub</span>
@@ -65,3 +65,9 @@
     </div>
   </div>
 </template>
+<script setup>
+useHead({
+  title: "ABOUT",
+  meta: [{ name: "description", content: "NAGANUMA ABOUT" }],
+});
+</script>

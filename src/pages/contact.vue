@@ -1,17 +1,5 @@
-<script lang="ts" setup>
-useHead({
-  title: "Newt・Nuxtフォーム",
-  meta: [
-    {
-      name: "description",
-      content: "NewtとNuxtを利用した問い合わせフォームです",
-    },
-  ],
-});
-</script>
-
 <template>
-  <div class="mt-16">
+  <div class="mt-16 w-[20rem] mx-auto">
     <h1 class="text-4xl mb-4 font-bold">CONTACT</h1>
     <p class="">お問い合わせはこちらから</p>
     <form
@@ -47,3 +35,15 @@ useHead({
     </form>
   </div>
 </template>
+
+<script lang="ts" setup>
+useHead({
+  title: "CONTACT",
+  meta: [
+    {
+      name: "description",
+      content: "NAGANUMA CONTACT",
+    },
+  ],
+});
+</script>

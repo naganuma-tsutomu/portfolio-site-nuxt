@@ -1,22 +1,10 @@
 <template>
-  <div class="font-sans text-white w-[20rem] mx-auto">
-    <div>
-      <Head>
-        <Title>タイトルです。</Title>
-        <Meta name="description" content="説明です" />
-      </Head>
-    </div>
+  <div class="font-sans text-white md:w-[700px] w-[20rem] mx-auto">
     <Header />
     <Video />
-    <main class="min-h-[calc(100vh_-_10rem)]">
+    <main class="min-h-[calc(100vh_-_15rem)] md:mx-5 mb-[3rem]">
       <slot />
     </main>
     <Footer />
   </div>
 </template>
-<script setup>
-useHead({
-  title: "タイトルです。",
-  meta: [{ name: "description", description: "説明です" }],
-});
-</script>

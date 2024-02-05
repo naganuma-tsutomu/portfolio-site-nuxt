@@ -4,4 +4,5 @@ export interface Article {
     title: string
     slug: string
     body: string
+    coverImage: Array<string>
   }
