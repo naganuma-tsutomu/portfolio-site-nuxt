@@ -5,6 +5,11 @@ export default defineNuxtConfig({
   // ページアニメーションの設定
   app: {
     pageTransition: { name: "page", mode: "out-in" },
+    head: {
+      htmlAttrs: {
+        lang: "ja",
+      },
+    },
   },
   vite: { assetsInclude: ["**/*.mov"] },
   postcss: {
@@ -15,7 +20,11 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      WPAPI: process.env.WPAPI,
+      WPAPI: "",
+      newt: {
+        spaceUid: "",
+        cdnApiToken: "",
+      },
     },
   },
   ssr: true, // SSRする場合
