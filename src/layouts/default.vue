@@ -1,5 +1,5 @@
 <template>
-  <div class="font-mono text-white w-[20rem] mx-auto">
+  <div class="font-sans text-white w-[20rem] mx-auto">
     <div>
       <Head>
         <Title>タイトルです。</Title>
