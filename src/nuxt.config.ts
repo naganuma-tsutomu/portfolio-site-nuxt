@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   css: ["~/assets/css/tailwind.css"],
   // ページアニメーションの設定
   app: {
-    // pageTransition: { name: "page", mode: "out-in" },
+    pageTransition: { name: "page", mode: "out-in" },
     head: {
       htmlAttrs: {
         lang: "ja",
