@@ -2,10 +2,11 @@
   <header class="">
     <div class="h-[5rem] flex items-center transition-all justify-center">
       <TransitionGroup name="nav">
-        <NuxtLink to="/">
+        <NuxtLink to="/" key="item">
           <h1 class="text-3xl p-4 transition-all hover:scale-110">NAGANUMA</h1>
         </NuxtLink>
         <button
+          key="item"
           v-if="!isTopPage"
           @click="toggleNav"
           class="outline-none focus:outline-none z-50 ml-8 md:ml-[25rem]"
@@ -47,13 +48,22 @@
           <ul
             class="grid text-4xl gap-20 [&>*]:font-bold [&_a]:p-5 [&>*]:w-full [&>*]:text-center"
           >
-            <li class="hover:text-lime-500 hover:-translate-y-2 transition-all" @click="toggleNav">
+            <li
+              class="hover:text-lime-500 hover:-translate-y-2 transition-all"
+              @click="toggleNav"
+            >
               <NuxtLink to="/about" class="block">ABOUT</NuxtLink>
             </li>
-            <li class="hover:text-lime-500 hover:-translate-y-2 transition-all" @click="toggleNav">
+            <li
+              class="hover:text-lime-500 hover:-translate-y-2 transition-all"
+              @click="toggleNav"
+            >
               <NuxtLink to="/work" class="block">WORK</NuxtLink>
             </li>
-            <li class="hover:text-lime-500 hover:-translate-y-2 transition-all" @click="toggleNav">
+            <li
+              class="hover:text-lime-500 hover:-translate-y-2 transition-all"
+              @click="toggleNav"
+            >
               <NuxtLink to="/contact" class="block">CONTACT</NuxtLink>
             </li>
           </ul>
