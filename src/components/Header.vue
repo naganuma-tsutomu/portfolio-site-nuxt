@@ -3,7 +3,7 @@
     <div class="h-[5rem] flex items-center transition-all justify-center">
       <TransitionGroup name="nav">
         <NuxtLink to="/" key="item">
-          <h1 class="text-3xl p-4 transition-all hover:scale-110">NAGANUMA</h1>
+          <h1 class="text-3xl p-4 transition-all hover:scale-110">Naganuma</h1>
         </NuxtLink>
         <button
           key="item"

@@ -23,7 +23,7 @@
 </template>
 <script setup>
 useHead({
-  title: "NAGANUMA",
-  meta: [{ name: "description", content: "NAGANUMA ポートフォリオサイト" }],
+  title: "Naganuma",
+  meta: [{ name: "description", content: "Naganuma ポートフォリオサイト" }],
 });
 </script>

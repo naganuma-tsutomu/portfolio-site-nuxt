@@ -1,6 +1,6 @@
 <template>
-  <div class="mt-16 active">
-    <h2 class="title text-2xl mb-4 font-bold">{{ article?.title }}</h2>
+  <div class="mt-16 active [&_h2]:mt-8 [&_h2]:mb-3">
+    <h1 class="title text-2xl mb-4 font-bold">{{ article?.title }}</h1>
     <!-- eslint-disable-next-line vue/no-v-html -->
     <div class="img" v-html="article?.body" />
     <NuxtLink to="/work">

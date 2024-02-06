@@ -42,7 +42,7 @@ useHead({
   meta: [
     {
       name: "description",
-      content: "NAGANUMA CONTACT",
+      content: "Naganuma CONTACT",
     },
   ],
 });

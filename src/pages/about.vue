@@ -7,9 +7,9 @@
         src="../assets/img/top-img.jpg"
         alt="画像"
       />
-      <h3 class="font-bold text-xl">NAGANUMA</h3>
+      <h3 class="font-bold text-xl">Naganuma</h3>
       <p class="mt-2">web engineer in Fukushima</p>
-      <p class="mt-6">福島県でWEBエンジニアをしています。</p>
+      <p class="mt-6">福島県でWEBエンジニアをしているNaganumaです。</p>
       <p>
         主にWordpressやnuxt.jsを使用してホームページの制作や、VBAでの自動処理プログラムの作成を行っています。
       </p>
@@ -66,6 +66,6 @@
 <script setup>
 useHead({
   title: "ABOUT",
-  meta: [{ name: "description", content: "NAGANUMA ABOUT" }],
+  meta: [{ name: "description", content: "Naganuma ABOUT" }],
 });
 </script>

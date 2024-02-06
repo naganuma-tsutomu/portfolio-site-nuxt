@@ -44,7 +44,7 @@ const articles = data.value?.items;
 
 useHead({
   title: "WORK",
-  meta: [{ name: "description", content: "NAGANUMA WORK" }],
+  meta: [{ name: "description", content: "Naganuma WORK" }],
 });
 </script>
 <style>
