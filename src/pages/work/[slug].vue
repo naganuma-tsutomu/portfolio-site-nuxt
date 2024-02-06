@@ -3,6 +3,9 @@
     <h2 class="title text-2xl mb-4 font-bold">{{ article?.title }}</h2>
     <!-- eslint-disable-next-line vue/no-v-html -->
     <div class="img" v-html="article?.body" />
+    <NuxtLink to="/work">
+      <div class="border text-center py-1 border-lime-500 w-20 rounded-md mx-auto mt-8">一覧へ</div>
+    </NuxtLink>
   </div>
 </template>
 

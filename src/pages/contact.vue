@@ -27,7 +27,7 @@
         name="message"
       />
       <button
-        class="border border-lime-300 w-20 h-10 rounded-md mx-auto mt-8"
+        class="border border-lime-500 w-20 h-10 rounded-md mx-auto mt-8"
         type="submit"
       >
         Submit
