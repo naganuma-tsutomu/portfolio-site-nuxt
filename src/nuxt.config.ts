@@ -1,16 +1,20 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  experimental: {
+    viewTransition: true,
+  },
   css: ["~/assets/css/tailwind.css"],
   // ページアニメーションの設定
   app: {
-    pageTransition: { name: "page", mode: "out-in" },
+    // pageTransition: { name: "page", mode: "out-in" },
     head: {
       htmlAttrs: {
         lang: "ja",
       },
     },
   },
+  modules: ["@pinia/nuxt"],
   vite: { assetsInclude: ["**/*.mov"] },
   postcss: {
     plugins: {
