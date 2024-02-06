@@ -1,6 +1,6 @@
 <template>
   <header class="">
-    <div class="h-[5rem] flex items-center gap-8 transition-all justify-center">
+    <div class="h-[5rem] flex items-center transition-all justify-center">
       <TransitionGroup name="nav">
         <NuxtLink to="/">
           <h1 class="text-3xl p-4 transition-all hover:scale-110">NAGANUMA</h1>
@@ -8,10 +8,10 @@
         <button
           v-if="!isTopPage"
           @click="toggleNav"
-          class="outline-none focus:outline-none"
+          class="outline-none focus:outline-none z-50 ml-8 md:ml-[25rem]"
         >
           <svg
-            class="w-16 h-16 p-4"
+            class="w-16 h-16 md:w-[4.5rem] md:h-[4.5rem] p-4"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -36,29 +36,30 @@
         </button>
       </TransitionGroup>
     </div>
-    <div
-      class="fixed top-5rem left-0 w-full h-full"
-      v-if="showNav"
-      @click="toggleNav"
-    >
-      <nav
-        class="w-[20rem] mx-auto pb-[5rem] min-h-[calc(100vh_-_5rem)] grid items-center"
+    <Transition name="hum">
+      <div
+        class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 backdrop-blur-sm z-40"
+        v-if="showNav"
       >
-        <ul
-          class="grid text-4xl text-lime-500 gap-20 [&>*]:font-bold [&_a]:p-5 [&>*]:border-solid [&>*]:border [&>*]:w-full [&>*]:text-center [&>*]:bg-white"
+        <nav
+          class="w-[20rem] mx-auto pb-[5rem] min-h-[calc(100vh_-_5rem)] grid items-center"
         >
-          <li class="hover:bg-lime-500 hover:border-lime-500 transition-all">
-            <NuxtLink to="/about" class="block">ABOUT</NuxtLink>
-          </li>
-          <li class="hover:bg-lime-500 hover:border-lime-500 transition-all">
-            <NuxtLink to="/tourist-spot" class="block">WORK</NuxtLink>
-          </li>
-          <li class="hover:bg-lime-500 hover:border-lime-500 transition-all">
-            <NuxtLink to="/contact" class="block">CONTACT</NuxtLink>
-          </li>
-        </ul>
-      </nav>
-    </div>
+          <ul
+            class="grid text-4xl gap-20 [&>*]:font-bold [&_a]:p-5 [&>*]:w-full [&>*]:text-center"
+          >
+            <li class="hover:text-lime-500 hover:-translate-y-2 transition-all" @click="toggleNav">
+              <NuxtLink to="/about" class="block">ABOUT</NuxtLink>
+            </li>
+            <li class="hover:text-lime-500 hover:-translate-y-2 transition-all" @click="toggleNav">
+              <NuxtLink to="/tourist-spot" class="block">WORK</NuxtLink>
+            </li>
+            <li class="hover:text-lime-500 hover:-translate-y-2 transition-all" @click="toggleNav">
+              <NuxtLink to="/contact" class="block">CONTACT</NuxtLink>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </Transition>
   </header>
 </template>
 
@@ -68,15 +69,15 @@ const showNav = ref(false);
 const toggleNav = () => {
   showNav.value = !showNav.value;
 };
-
+// メインヘッダー
 const isTopPage = ref(false);
 const router = useRouter();
 watch(
   () => router.currentRoute.value.path,
   (newPath) => {
     isTopPage.value = newPath === "/";
-    console.log(isTopPage);
-  }
+  },
+  { immediate: true }
 );
 </script>
 
@@ -98,5 +99,15 @@ watch(
 }
 .nav-leave-active {
   position: absolute;
+}
+/* ハンバーガーメニュー */
+.hum-enter-active,
+.hum-leave-active {
+  transition: all 0.4s;
+}
+.hum-enter-from,
+.hum-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
 }
 </style>
