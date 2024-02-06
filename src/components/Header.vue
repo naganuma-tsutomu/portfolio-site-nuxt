@@ -51,7 +51,7 @@
               <NuxtLink to="/about" class="block">ABOUT</NuxtLink>
             </li>
             <li class="hover:text-lime-500 hover:-translate-y-2 transition-all" @click="toggleNav">
-              <NuxtLink to="/tourist-spot" class="block">WORK</NuxtLink>
+              <NuxtLink to="/work" class="block">WORK</NuxtLink>
             </li>
             <li class="hover:text-lime-500 hover:-translate-y-2 transition-all" @click="toggleNav">
               <NuxtLink to="/contact" class="block">CONTACT</NuxtLink>
