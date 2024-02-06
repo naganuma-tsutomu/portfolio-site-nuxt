@@ -1,9 +1,9 @@
 <template>
-  <main class="main">
-    <h2>{{ article?.title }}</h2>
+  <div class="mt-16 active">
+    <h2 class="title text-2xl mb-4 font-bold">{{ article?.title }}</h2>
     <!-- eslint-disable-next-line vue/no-v-html -->
-    <div v-html="article?.body" />
-  </main>
+    <div class="img" v-html="article?.body" />
+  </div>
 </template>
 
 <script lang="ts" setup>

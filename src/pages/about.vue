@@ -1,7 +1,6 @@
 <template>
   <div class="mt-16">
-    <h1 class="text-4xl mb-4 font-bold">ABOUT</h1>
-    <div>
+    <h1 class="text-4xl mb-4 font-bold [view-transition-name:about]">ABOUT</h1>
       <div class="">
         <img
           class="h-40 rounded-lg mt-8 mb-4"
@@ -62,7 +61,7 @@
           </div>
         </div>
       </div>
-    </div>
+
   </div>
 </template>
 <script setup>

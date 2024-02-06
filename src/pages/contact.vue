@@ -1,6 +1,6 @@
 <template>
   <div class="mt-16 w-[20rem] mx-auto">
-    <h1 class="text-4xl mb-4 font-bold">CONTACT</h1>
+    <h1 class="text-4xl mb-4 font-bold [view-transition-name:contact]">CONTACT</h1>
     <p class="">お問い合わせはこちらから</p>
     <form
       class="grid mt-8"
