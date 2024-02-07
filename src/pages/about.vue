@@ -23,6 +23,7 @@
           <div class="[&_span]:block [&_span]:indent-5">
             <span>HTML</span>
             <span>CSS</span>
+            <span>SCSS</span>
             <span>JavaScript</span>
             <span>TypeScript</span>
             <span>PHP</span>
